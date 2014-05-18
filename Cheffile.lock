@@ -1,0 +1,46 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    android-sdk (0.0.0)
+      ark (>= 0.0.0)
+      java (>= 0.0.0)
+    apt (2.3.0)
+    ark (0.4.0)
+    build-essential (1.4.2)
+    chef_handler (1.1.6)
+    dmg (2.0.8)
+    git (2.7.0)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+    java (1.22.0)
+    maven (1.0.0)
+      ark (~> 0.4)
+      java (~> 1.13)
+    ohai (1.1.12)
+    rbenv (1.6.5)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      git (>= 0.0.0)
+      ohai (>= 1.1)
+    runit (1.4.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    windows (1.30.2)
+      chef_handler (>= 0.0.0)
+    yum (2.4.2)
+
+PATH
+  remote: my-cookbooks/intellij
+  specs:
+    intellij (0.1.0)
+
+DEPENDENCIES
+  android-sdk (>= 0)
+  intellij (>= 0)
+  java (>= 0)
+  maven (>= 0)
+  rbenv (>= 0)
+

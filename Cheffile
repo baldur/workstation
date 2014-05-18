@@ -1,0 +1,12 @@
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'java'
+cookbook 'rbenv'
+cookbook 'maven'
+cookbook 'android-sdk'
+
+%w( intellij ).each do |cb|
+  cookbook cb, path: "my-cookbooks/#{cb}"
+end
+
+
