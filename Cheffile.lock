@@ -1,9 +1,6 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    android-sdk (0.0.0)
-      ark (>= 0.0.0)
-      java (>= 0.0.0)
     apt (2.3.0)
     ark (0.4.0)
     build-essential (1.4.2)
@@ -20,6 +17,7 @@ SITE
       ark (~> 0.4)
       java (~> 1.13)
     ohai (1.1.12)
+    package_installer (0.0.1)
     rbenv (1.6.5)
       apt (>= 0.0.0)
       build-essential (>= 0.0.0)
@@ -28,9 +26,32 @@ SITE
     runit (1.4.0)
       build-essential (>= 0.0.0)
       yum (>= 0.0.0)
+    sudo (2.6.0)
     windows (1.30.2)
       chef_handler (>= 0.0.0)
     yum (2.4.2)
+
+GIT
+  remote: https://github.com/gildegoma/chef-android-sdk.git
+  ref: master
+  sha: 6e72dfa373ee0c1160e83edefd269e167e194a34
+  specs:
+    android-sdk (0.2.0)
+      ark (>= 0.0.0)
+      java (>= 0.0.0)
+
+GIT
+  remote: https://github.com/ikusalic/chef-vim-setup.git
+  ref: master
+  sha: ea6b0bc6ca75e8aff29d8bd8177d2d50c64883f4
+  specs:
+    vim-setup (1.3.1)
+      git (>= 0.0.0)
+
+PATH
+  remote: my-cookbooks/general
+  specs:
+    general (0.1.0)
 
 PATH
   remote: my-cookbooks/intellij
@@ -39,8 +60,12 @@ PATH
 
 DEPENDENCIES
   android-sdk (>= 0)
+  general (>= 0)
   intellij (>= 0)
   java (>= 0)
   maven (>= 0)
+  package_installer (>= 0)
   rbenv (>= 0)
+  sudo (>= 0)
+  vim-setup (>= 0)
 

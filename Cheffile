@@ -3,9 +3,12 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'java'
 cookbook 'rbenv'
 cookbook 'maven'
-cookbook 'android-sdk'
+cookbook 'sudo'
+cookbook 'android-sdk', git: 'https://github.com/gildegoma/chef-android-sdk.git'
+cookbook 'package_installer'
+cookbook 'vim-setup', git: 'https://github.com/ikusalic/chef-vim-setup.git' 
 
-%w( intellij ).each do |cb|
+%w( intellij general ).each do |cb|
   cookbook cb, path: "my-cookbooks/#{cb}"
 end
 
