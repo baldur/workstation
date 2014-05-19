@@ -29,3 +29,8 @@ Execute "unpack intellij" do
   command "tar xvvf ideaIC-#{node[:intellij][:version]}.tar.gz -C ./ --strip-components 1"
   user node[:user]
 end
+
+file "/etc/profile.d/intellij.sh" do
+  content "export PATH=$PATH:#{node[:intellij][:install_dir]}/bin"
+  mode 00755
+end
