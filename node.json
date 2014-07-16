@@ -14,10 +14,28 @@
   },
   "package_installer" : {
     "packages" : {
+      "scrot": null,
       "git" : null,
       "openvpn" : null,
       "zsh" : null,
-      "tree" : null
+      "tree" : null,
+      "build-essential" : null,
+      "bison" : null, 
+      "openssl" : null, 
+      "libreadline6" : null, 
+      "libreadline6-dev" : null, 
+      "zlib1g" : null, 
+      "zlib1g-dev" : null, 
+      "libssl-dev" : null, 
+      "libyaml-dev" : null, 
+      "libsqlite3-0" : null, 
+      "libsqlite3-dev" : null, 
+      "sqlite3" : null, 
+      "libxml2-dev" : null, 
+      "libxslt-dev" : null, 
+      "autoconf" : null, 
+      "libc6-dev" : null, 
+      "ncurses-dev" : null
     }
   },
   "vim_setup" : {
@@ -31,7 +49,7 @@
   },
   "authorization": {
     "sudo": {
-       "users": ["baldur"],
+       "users": ["baldur", "postgres"],
        "passwordless": "true"
     }
   },
@@ -51,6 +69,27 @@
       "extra-android-m2repository"
     ]
   },
+  "rbenv" : {
+    "user_installs" : [
+/*
+      { "user" : "baldur",
+        "rubies" : ["ruby-2.1.2", "jruby-1.7.12"],
+        //"global" : "ruby-2.1.2",
+        "gems" : {
+          "ruby-2.1.2" : [
+            { "name"    : "bundler" },
+            { "name"    : "rake" }
+          ],
+          "jruby-1.7.12" : [
+            { "name"    : "bundler" },
+            { "name"    : "rake" }
+          ]
+        }
+     }
+*/
+    ]
+  },
+
   "run_list" : [
     "recipe[java]",
     "recipe[package_installer]",
@@ -59,7 +98,8 @@
     "recipe[general]",
     "recipe[android-sdk]",
     "recipe[maven]",
-    "recipe[sudo]"
+    "recipe[sudo]",
+    "recipe[rbenv::user]"
   ]
 }
 

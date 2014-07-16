@@ -1,7 +1,6 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apt (2.3.0)
     ark (0.4.0)
     build-essential (1.4.2)
     chef_handler (1.1.6)
@@ -16,13 +15,7 @@ SITE
     maven (1.0.0)
       ark (~> 0.4)
       java (~> 1.13)
-    ohai (1.1.12)
     package_installer (0.0.1)
-    rbenv (1.6.5)
-      apt (>= 0.0.0)
-      build-essential (>= 0.0.0)
-      git (>= 0.0.0)
-      ohai (>= 1.1)
     runit (1.4.0)
       build-essential (>= 0.0.0)
       yum (>= 0.0.0)
@@ -30,6 +23,13 @@ SITE
     windows (1.30.2)
       chef_handler (>= 0.0.0)
     yum (2.4.2)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv.git
+  ref: master
+  sha: 0a3018634bafe58ad21c6ee271af015220e444b9
+  specs:
+    rbenv (0.7.3)
 
 GIT
   remote: https://github.com/gildegoma/chef-android-sdk.git

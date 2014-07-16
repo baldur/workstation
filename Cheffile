@@ -1,7 +1,7 @@
 site 'http://community.opscode.com/api/v1'
 
 cookbook 'java'
-cookbook 'rbenv'
+cookbook 'rbenv', git: 'https://github.com/fnichol/chef-rbenv.git'
 cookbook 'maven'
 cookbook 'sudo'
 cookbook 'android-sdk', git: 'https://github.com/gildegoma/chef-android-sdk.git'
